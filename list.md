@@ -56,27 +56,32 @@ sorted(iterable, cmp = None, key = None, reverse = False)
   + list 的 sort 方法返回的是对已经存在的列表进行操作，无返回值，而内建函数 sorted 方法返回的是一个新的 list，而不是在原来的基础上进行的操作。
 
 ## 嵌套列表 （Nested list）
+#### 根据第1/2项对整个列表降序排列
+```python
+stu.sort(key = lambda x:x[0], reverse = True)
 ```
-# 根据第1/2项对整个列表降序排列
+#### 根据第1项字符串长度对整个列表降序排列
+```python
+stu.sort(key = lambda x:len(x[0]), reverse = True)
 ```
-
+#### 提取每个小列表第1项的数 
+```python
+[lst[1] for lst in stu]. # 列表推导式
 ```
-# 根据第1项字符串长度对整个列表降序排列
+#### 列表展平化
+```python
+nums = [[1,2,3],[4,5,6]]
+c = [e for num in nums for e in num]
+print(c)
 ```
-
 ```
-# 提取每个小列表第1项的数
+>>> [1, 2, 3, 4, 5, 6]
 ```
-
-```
-# 列表展平化
-```
-
 ## 其他方法
 ```
-list.insert(index,objection)
+list.insert(index,objection) 
 ```
 
 ```
-list.pop(index = -1)
+list.pop(index = -1)  #默认最后一个元素
 ``` 
