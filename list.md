@@ -17,7 +17,19 @@ range(start = 0, end, step) #左闭右开
   +[]
   +list()
 ```
+## 转换成列表
+#### 字典转换成列表
+```python
+dict = {'name': '张三', 'age': 18, 'sex': '男'}
+keys = list(dict.keys())         # dict.keys()返回的是dict_keys(['name', 'age', 'sex'])，这是class "dict_keys"
+values = list(dict.values())     # dict.values()返回的是dict_values(['张三', 18, '男'])，这是class "dict_values"
+print(keys)
+print(values)
+```
+#### 字符串转换成列表
 
+#### 元组转换成列表
+#### 集合转换成列表
 ## 生成全排列列表
 ```python
 # method 1
