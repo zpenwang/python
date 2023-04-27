@@ -44,7 +44,6 @@ print(dic , type(dic))
 ```
 
 #### 列表转化成字典 
-print(dict(list3))
 ```python
 # method 1 利用dict(zip())
 a = ["age","height","weight"]
