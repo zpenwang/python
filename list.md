@@ -17,7 +17,8 @@ range(start = 0, end, step) #左闭右开
   +[]
   +list()
 ```
-## 转换成列表
+## 转换成列表 
+list()方法可以解决大多数问题
 #### 字典转换成列表
 ```python
 dict = {'name': '张三', 'age': 18, 'sex': '男'}
@@ -27,9 +28,41 @@ print(keys)
 print(values)
 ```
 #### 字符串转换成列表
-
+```python
+# 第一种
+str1 = 'hello python'
+str2= str1.split(' ')    # split方法返回字符串列表
+print(str2)
+```
+```
+>>> ['hello', 'python']
+```
+```python
+# 第二种
+str1 = 'bonjour'
+print(list(str1))
+```
+```
+>>> ['b', 'o', 'n', 'j', 'o', 'u', 'r']
+```
 #### 元组转换成列表
+```python
+tuple = (1, 2, 3)
+list = list(tuple)
+print(list)
+```
+```
+>>> [1, 2, 3]
+```
 #### 集合转换成列表
+```python
+set1 = {1, 3, 4, 3, 2, 1}
+list1 = list(set1)
+print(list1)
+```
+```
+>>> [1, 2, 3, 4]
+```
 ## 生成全排列列表
 ```python
 # method 1
