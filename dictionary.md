@@ -121,3 +121,12 @@ print(dic)
 ```
 >>> {'age': 30}
 ```
+## 键值对互换
+```python
+dic1 = {'a': 1, 'b': 2, 'c': 3}
+dic2 = {value: key for key, value in dic1.items()}
+print(dic2)
+```
+```
+>>> {1: 'a', 2: 'b', 3: 'c'}
+```
