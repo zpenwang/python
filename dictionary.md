@@ -16,8 +16,7 @@ dic = {i:i**2 for i in range(1,5)}
 ```python
 a = ["age","height","weight"]
 b = [15,28,90]
-d = zip(a,b)
-print(dict(d))
+print(dict(zip(a,b)))
 ```
 ```
 {'age': 15, 'height': 28, 'weight': 90}
