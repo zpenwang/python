@@ -1,23 +1,25 @@
+## 元素特征
+列表的元素可重复，元素的类型也可以不同
 ## 列表的创建
-```
-# 创建普通列表
+#### 创建普通列表
+```python
   + a = [1,2,c]
   + a = list(1,2,3)
 ```
 
-```
-# 创建整数列表
+#### 创建整数列表
+```python
 range(start = 0, end, step) #左闭右开
 ```
 
-```
-# 创建空列表
+#### 创建空列表
+```python
   +[]
   +list()
 ```
 
 ## 生成全排列列表
-```
+```python
 # method 1
 import itertools
 nums = [1,2,3]
@@ -27,7 +29,7 @@ print(permutations)
 >>> [(1, 2, 3), (1, 3, 2), (2, 1, 3), (2, 3, 1), (3, 1, 2), (3, 2, 1)]
 ```
 
-```
+```python
 # method 2
 x = int(input())
 y = int(input())
@@ -37,7 +39,8 @@ print ([ [ i, j, k] for i in range( x + 1) for j in range( y + 1) for k in range
 ```
 
 ## 整理列表
-```
+```python
+# method 1
 list.sort(cmp = None, key = None, reverse = False)
 ```
 + 描述：用于对原列表进行排序  
@@ -47,7 +50,8 @@ list.sort(cmp = None, key = None, reverse = False)
   + reverse -- 排序规则，reverse = True 降序， reverse = False 升序（default）    
 + 返回：没有返回值，但是会在原列表的基础上对列表的对象进行排序
 
-```
+```python
+# method 2
 sorted(iterable, cmp = None, key = None, reverse = False)
 ```
 + 返回： 返回重新排序的列表
@@ -78,10 +82,10 @@ print(c)
 >>> [1, 2, 3, 4, 5, 6]
 ```
 ## 其他方法
-```
+```python
 list.insert(index,objection) 
 ```
 
-```
+```python
 list.pop(index = -1)  #默认最后一个元素
 ``` 
