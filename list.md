@@ -17,6 +17,15 @@ range(start = 0, end, step) #左闭右开
   +[]
   +list()
 ```
+## 主要方法
+```python
+list.insert(index,objection) 
+```
+
+```python
+list.pop(index = -1)  #默认最后一个元素
+``` 
+
 ## 转换成列表 
 list()方法可以解决大多数问题
 #### 字典转换成列表
@@ -63,6 +72,28 @@ print(list1)
 ```
 >>> [1, 2, 3, 4]
 ```
+## 嵌套列表 （Nested list）
+#### 根据第1/2项对整个列表降序排列
+```python
+stu.sort(key = lambda x:x[0], reverse = True)
+```
+#### 根据第1项字符串长度对整个列表降序排列
+```python
+stu.sort(key = lambda x:len(x[0]), reverse = True)
+```
+#### 提取每个小列表第1项的数 
+```python
+[lst[1] for lst in stu]. # 列表推导式
+```
+#### 列表展平化
+```python
+nums = [[1,2,3],[4,5,6]]
+c = [e for num in nums for e in num]
+print(c)
+```
+```
+>>> [1, 2, 3, 4, 5, 6]
+```
 ## 生成全排列列表
 ```python
 # method 1
@@ -104,33 +135,3 @@ sorted(iterable, cmp = None, key = None, reverse = False)
   + sort 是应用在 list 上的方法，sorted 可以对所有可迭代的对象进行排序操作。
   + list 的 sort 方法返回的是对已经存在的列表进行操作，无返回值，而内建函数 sorted 方法返回的是一个新的 list，而不是在原来的基础上进行的操作。
 
-## 嵌套列表 （Nested list）
-#### 根据第1/2项对整个列表降序排列
-```python
-stu.sort(key = lambda x:x[0], reverse = True)
-```
-#### 根据第1项字符串长度对整个列表降序排列
-```python
-stu.sort(key = lambda x:len(x[0]), reverse = True)
-```
-#### 提取每个小列表第1项的数 
-```python
-[lst[1] for lst in stu]. # 列表推导式
-```
-#### 列表展平化
-```python
-nums = [[1,2,3],[4,5,6]]
-c = [e for num in nums for e in num]
-print(c)
-```
-```
->>> [1, 2, 3, 4, 5, 6]
-```
-## 其他方法
-```python
-list.insert(index,objection) 
-```
-
-```python
-list.pop(index = -1)  #默认最后一个元素
-``` 
