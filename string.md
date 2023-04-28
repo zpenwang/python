@@ -1,5 +1,18 @@
 ## 常用方法
 ```python
+str.ljust(width[, fillchar])
+```
++ 功用：返回一个原字符串左对齐,并使用填充字符填充至指定长度的新字符串。如果指定的长度小于原字符串的长度则返回原字符串  
++ 参数：
+   + width -- 指定字符串长度。
+   + fillchar -- 填充字符，默认为空格。
+```python
+str.center(width[, fillchar])
+```
+```python
+str.rjust(width[, fillchar])
+```
+```python
 str.split(str="", num) 
 ```  
 + 功用：通过指定分隔符对字符串进行切片
@@ -31,3 +44,32 @@ print(str1)
 ```
 #### 集合/字典转成字符串
 str()方法
+## 字符串的连接
+#### 中间有空格
+```python
+print("Hello","python")
+```
+```
+>>> Hello python
+```
+#### 中间无空格
+```python
+# method1
+print("Hello"+"python")
+```
+```python
+# method2
+print("Hello""python")
+```
+```
+>>> Hellopython
+```
+```python
+# method 3：str.join()方法
+list = ['人', '生', '苦', '短']
+str1 = ''.join(list)
+print(str1)
+```
+```
+>>> 人生苦短
+```
