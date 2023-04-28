@@ -42,6 +42,18 @@ list = ['人', '生', '苦', '短']
 str1 = ''.join(list)
 print(str1)
 ```
+```python
+# 变形1
+list = ['人', '生', '苦', '短']
+str1 = ''.join(map(str,list))
+print(str1)
+```
+```python
+# 变形 2
+list = ['人', '生', '苦', '短']
+str1 = ''.join(str(x) for x in list)
+print(str1)
+```
 #### 集合/字典转成字符串
 str()方法
 ## 字符串的连接
