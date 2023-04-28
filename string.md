@@ -115,5 +115,5 @@ string = "abcdefghijklmnopq"
 print(textwrap.wrap(string,4))
 ```
 ```
-['abcd', 'efgh', 'ijkl', 'mnop', 'q']    # 返回的是截取后的字符串生成的列表
+>>> ['abcd', 'efgh', 'ijkl', 'mnop', 'q']    # 返回的是截取后的字符串生成的列表
 ```
