@@ -85,3 +85,35 @@ print(str1)
 ```
 >>> 人生苦短
 ```
+## 字符串每int个截取一次
+#### 换行输出
+```python
+# method 1
+import textwrap
+string = "This is a very very very very very long string."
+print(textwrap.fill(string,8))
+```
+```
+>>> This is  # 返回的是段落自动换行后的单独字符串
+>>> a very
+>>> very
+>>> very
+>>> very
+>>> very
+>>> long
+>>> string.
+```
+```python
+# method 2
+for i in range(0,len(string)+1,max_width):
+        result = string[i:i+max_width]
+```
+#### 不换行输出
+```python
+import textwrap
+string = "abcdefghijklmnopq"
+print(textwrap.wrap(string,4))
+```
+```
+['abcd', 'efgh', 'ijkl', 'mnop', 'q']    # 返回的是截取后的字符串生成的列表
+```
