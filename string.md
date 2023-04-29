@@ -117,3 +117,5 @@ print(textwrap.wrap(string,4))
 ```
 >>> ['abcd', 'efgh', 'ijkl', 'mnop', 'q']    # 返回的是截取后的字符串生成的列表
 ```
+## 字符串格式化
+https://www.cnblogs.com/nutix/p/4504899.html
