@@ -14,9 +14,6 @@ a = "hello"
 b = "world"
 print(f"{a} {b}") # format用法变形: f"xxxx"(字符串前面加f)
 ```
-```
->>> 'hello world'
-```
 ```python
 print("{:.2f}".format(3.1415926)) # 数字格式化
 ```
