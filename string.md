@@ -137,6 +137,13 @@ print("{:.2f}".format(3.1415926)) # 数字格式化
 ```
 <img width="837" alt="截屏2023-04-22 22 45 04" src="https://user-images.githubusercontent.com/131491147/233805989-ade77de4-0534-41d9-a49a-3b9c351f6dd0.png">
 
+*数值类型不加# vs 加#：*      
+*二进制整数'1111011''0b1111011'开头是否显示 0b*   
+*八进制整数'173''0o173'开头是否显示 0o*   
+*十进制整数'123''123'无区别*   
+*十六进制整数（小写字母）'7b''0x7b'开头是否显示 0x*   
+*十六进制整数（大写字母）'7B''0X7B'开头是否显示 0X*    
+
 #### f-string用法
 + {}填入变量名
 ```python
@@ -187,7 +194,7 @@ num = 87
 print(f"Is num even? {True if num%2==0 else False}")
 ```
 + f-string 填充
-  + 默认使用空格填充
+1. 默认使用空格填充
 ```python
 name = "Huang Wei"
 print(f"{name:>20}") #向右对齐
@@ -200,7 +207,7 @@ print(f"{name:^20}") #中间对齐
 'Huang Wei           '
 '     Huang Wei      '
 ```
-  + 使用指定符号填充
+2. 使用指定符号填充
 ```python
 name = "Huang Wei"
 f"{name:_>20}"
@@ -210,7 +217,7 @@ f"{name:_>20}"
 '___________Huang Wei'
 ```
 + 数字格式化
-
+1. 符号       
 ![02095935_62e88507378829371](https://user-images.githubusercontent.com/131491147/235367426-15f6dd05-57fd-48d3-848b-b5f3e37008a1.png)
 ```python
 a = 12
@@ -235,6 +242,8 @@ print(f"{b: }")
 ' 12'
 '-25'
 ```
+2. 宽度与精度
+
 ![02095935_62e8850752ea457966](https://user-images.githubusercontent.com/131491147/235367378-3e840fc3-b4f2-4e84-93cc-0594cd7e1287.png)
 ```python
 a = 123.456   
@@ -249,4 +258,43 @@ print(f"{a:2f}")    # 在width后面，直接加f，表示补足小数点后的�
 '000123.456'
 '   123.5'
 '123.456000'
+```
+
+3. 千位分隔符
+```python
+print(f"a is {a:,f}")
+print(f"a is {a:_f}")
+```
+```
+# output
+'a is 1,234,567,890.098765'
+'a is 1_234_567_890.098765'
+```
+4. 格式描述符含义
+s：普通字符串格式  字符串  
+b：二进制整数格式  整数  
+c：字符格式，按unicode编码将整数转换为对应字符  整数  
+d：十进制整数格式  整数  
+o：八进制整数格式  整数  
+x：十六进制整数格式（小写字母） 整数  
+X：十六进制整数格式（大写字母） 整数  
+e/E：科学计数格式，用e或者E来表示数学上的底数10，而后面紧跟次方数用+number或者-number来表示   浮点数、复数、整数（自动转换为浮点数）  
+f：定点数格式，默认精度（precision）是6    浮点数、复数、整数（自动转换为浮点数）    
+%：百分比格式，数字自动乘上100后按 f 格式排版，并加 % 后缀    浮点数、整数（自动转换为浮点数）  
+```python
+a = 1234
+print(f"a is {a:^#10X}")     # 居中，宽度10位，十六进制整数（大写字母），显示0X前缀
+```
+```
+# output
+'a is   0X4D2   '
+```
+```python
+import datetime
+e = datetime.datetime.today()
+f('the time is {e:%Y-%m-%d (%a) %H:%M:%S}')   # datetime时间格式
+```
+```
+# output
+'the time is 2018-07-14 (Sat) 20:46:02'
 ```
