@@ -23,8 +23,16 @@ list.insert(index,objection)
 ```
 
 ```python
-list.pop(index = -1)  #默认最后一个元素
+list.pop(index = -1)  
 ``` 
++ 功用：移除列表中的一个元素（默认最后一个元素），并且返回该元素的值
++ 返回：从列表中移除的元素对象
+
+```python
+list.append(obj)
+```
++ 功用：在列表末尾添加新的对象
++ 返回：无返回值，在原来的列表上修改
 
 ## 转换成列表 
 list()方法可以解决大多数问题
