@@ -1,0 +1,3 @@
+```python
+itertools.product(*iterables, repeat=1)
+```
