@@ -1,3 +1,4 @@
 ```python
 itertools.product(*iterables, repeat=1)
 ```
+product(A, B) = ((x,y) for x in A for y in B)
