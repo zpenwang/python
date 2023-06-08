@@ -1,0 +1,16 @@
+# iterable
++ 可迭代对象是指那些能够被迭代（遍历）的对象，e.g.可以是序列（如列表、元组、字符串），集合（如集合、字典）或其他自定义对象。
++ 可迭代对象可以通过调用内置函数iter()转换为迭代器
+```python
+my_list = [1, 2, 3, 4, 5]
+
+# 获取迭代器
+my_iterator = iter(my_list)
+
+# 使用迭代器遍历元素
+print(next(my_iterator))  # 输出: 1
+print(next(my_iterator))  # 输出: 2
+print(next(my_iterator))  # 输出: 3
+print(next(my_iterator))  # 输出: 4
+print(next(my_iterator))  # 输出: 5
+```
