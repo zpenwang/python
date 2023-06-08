@@ -138,3 +138,10 @@ dict.fromkeys(seq[, value])
   + seq -- 字典键值列表。
   + value -- 可选参数, 设置键序列（seq）对应的值，默认为 None
 + 返回：一个新字典
+```python
+dict.items()
+```
+
+```python
+dict.item()
+```
